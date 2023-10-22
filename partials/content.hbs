@@ -86,6 +86,21 @@
       </div>
       {{/if}}
 
+      {{#compare pagination.length '>' 1}}
+      <div class="pagination">
+        <nav class="pagination">
+          <p>Pages:
+          {{#each pagination}}
+          {{#if current}}
+          <a class="page current" href="{{relative url}}">{{index}}</a>
+          {{else}}
+          <a class="page" href="{{relative url}}">{{index}}</a>
+          {{/if}}
+          {{/each}}
+          </p>
+        </nav>
+      </div>
+      {{/compare}}
       
       {{#if gallery.footer}}
       <hr>
@@ -98,21 +113,5 @@
 
     </div>
   </div>
-
-  <!-- TODO Pagination -->
-  {{#compare pagination.length '>' 1}}
-  <div>
-    <nav class="pagination">
-      Pages:
-      {{#each pagination}}
-      {{#if current}}
-      <a class="page current" href="{{relative url}}">{{index}}</a>
-      {{else}}
-      <a class="page" href="{{relative url}}">{{index}}</a>
-      {{/if}}
-      {{/each}}
-    </nav>
-  </div>
-  {{/compare}}
 
 </div>
