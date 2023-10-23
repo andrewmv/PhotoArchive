@@ -19,6 +19,13 @@
             {{> dark-light-toggle}} <!-- {{> BW-toggle}} -->
           </div>
 
+          <p class="date-range">{{date album.stats.fromDate}} - {{date album.stats.toDate}}</p>
+          
+          {{#if album.zip}}
+          <div class="zip">
+            <p>Download album as <a href="{{album.zip}}">zip</a>.</p>
+          </div>
+          {{/if}}
 <!-- 
           <hr class="hr-half">
 
