@@ -73,25 +73,11 @@
       <!-- Subalbums -->
       {{#if album.albums}}
         <div id="albums">
-<!-- 
-          {{#each album.albums~}}
-            {{> subalbum}}
-          {{~/each}}
- -->
-        <ul id="galleries">
-         {{#each album.albums}}
-         <li>
-           <a href="{{relative url}}">
-             <h3>{{title}}</h3>
-             <ul class="grid">
-               {{~#slice previews count=4~}}
-               <li><img src="{{relative urls.thumbnail}}" /></li>
-               {{~/slice}}
-             </ul>
-           </a>
-         </li>
-         {{/each}}
-        </ul>
+          <ul id="galleries"> 
+            {{#each album.albums~}}
+              {{> subalbum}}
+            {{~/each}}
+          </ul>
         </div>
       {{/if}}
 
