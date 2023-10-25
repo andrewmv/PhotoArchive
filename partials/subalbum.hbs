@@ -3,13 +3,15 @@
         <a href="{{relative url}}">
             <ul class="grid">
                 {{~#slice previews count=4~}}
-                    <li><img src="{{relative urls.thumbnail}}" /></li>
+                    <li><img class="album-cover" src="{{relative urls.thumbnail}}" /></li>
                 {{~/slice}}
+                <li>
+                    <div class="album-info">
+                        <div class="album-title">{{title}} <span class="album-count">({{stats.photos}})</span></div>
+                        <div class="album-last-updated">{{monthYear stats.toDate}}</div>
+                    </div>
+                </li>
             </ul>
-            <div class="album-info">
-                <div class="album-title">{{title}} <span class="album-count">({{stats.photos}})</span></div>
-                <div class="album-last-updated">{{monthYear stats.toDate}}</div>
-            </div>
         </a>
     </li>
 </div>
