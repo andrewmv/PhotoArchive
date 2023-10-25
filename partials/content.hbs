@@ -73,11 +73,11 @@
       <!-- Subalbums -->
       {{#if album.albums}}
         <div id="albums">
-          <ul id="galleries"> 
-            {{#each album.albums~}}
+          {{#each album.albums~}}
+            <ul id="galleries"> 
               {{> subalbum}}
-            {{~/each}}
-          </ul>
+            </ul>
+          {{~/each}}
         </div>
       {{/if}}
 
