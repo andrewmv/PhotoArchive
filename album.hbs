@@ -4,6 +4,10 @@
   <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, user-scalable=no" />
+      <meta name="robots" content="noindex">
+      <meta property="og:title" content="{{gallery.title}}" />
+      <meta property="og:image" content="ogimage.jpg" />
+      <meta property="og:description" content="Photo Gallery for {{gallery.title}}" />
       <title>{{gallery.title}} - {{album.title}}</title>
       <link rel="stylesheet" href="{{relative 'public/lightgallery2/css/lightgallery-bundle.css'}}" />
       <link rel="stylesheet" href="{{relative 'public/core.css'}}" />

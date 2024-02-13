@@ -242,6 +242,42 @@ hr {
 
 // MEDIA
 
+// Code for album preview grids borrowed from the thumbsup-classic theme
+#galleries a {
+  display: inline-block;
+}
+
+#galleries .meta {
+  font-size: 0.9em;
+  width: 100%;
+  margin: 0.5em 0;
+  color: #666;
+  line-height: 1.2em;
+}
+
+#galleries > li {
+  display: inline-block;
+  margin-right: 2em;
+  margin-bottom: 3em;
+}
+/*
+#galleries .grid {
+  max-width: 200px;
+}
+*/
+#galleries .grid li {
+  float: left;
+  padding: 2px 2px 2px 2px;
+  width: 50% - 8px;
+}
+
+#galleries .grid img {
+  display: block;
+  width: 100%;
+}
+
+// End album preview grid 
+
 #albums {
   display: grid;
   grid-template-columns: 1fr;
@@ -264,7 +300,7 @@ hr {
 
 div.album img.album-cover {
   object-fit: cover;
-  aspect-ratio: 3 / 2;
+/*  aspect-ratio: 3 / 2;*/
   width: 100%;
   height: auto;
 }
@@ -273,6 +309,7 @@ div.album .album-info {
   margin-top: 8px;
   display: flex;
   justify-content: space-between;
+  width: 200%;
 
   font-size: 0.8em;
   
