@@ -1,19 +1,29 @@
 {{~#if isVideo~}}
 
-  {{!-- TODO (left as default)
+  {{!-- 
     Video thumbnails
   --}}
-
-  <li data-html="#media{{id}}"
-      data-download-url="{{relative urls.download}}">
-    <a href="{{relative urls.download}}">
-      <img src="{{relative urls.thumbnail}}"
-           width="{{@root.gallery.thumbSize}}"
-           height="{{@root.gallery.thumbSize}}"
-           alt="{{filename}}" />
+    <a href="{{relative urls.download}}"
+      data-video='
+        {"source": [{"src":"{{relative urls.video}}", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true}}'
+      data-sub-html='
+      {{~#if meta.caption~}}
+        <p class="caption">{{meta.caption}}</p>
+      {{~else~}}
+        <p class="caption">{{filename}}</p>
+      {{~/if~}}
+      <p class="date">{{date meta.date}}</p>
+      '
+      data-download-url="{{relative urls.download}}"
+      data-filename="{{filename}}"
+      data-poster="{{relative urls.small}}"
+      >
+      <img src="{{relative urls.small}}"
+        alt="{{filename}}"
+        class="img-responsive"
+        style="opacity: 1 !important;"
+        /> 
     </a>
-    <img class="video-overlay" src="{{relative 'public/play.png'}}" />
-  </li>
 
 {{~else~}}
 
