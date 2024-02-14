@@ -2,8 +2,10 @@
 
   {{!-- 
     Video thumbnails
+    Note: Using an "a href" instead of an "a" for the video thumbnail breaks
+    the video playback
   --}}
-    <a href="{{relative urls.download}}"
+    <a 
       data-video='{"source": [{"src":"{{relative urls.video}}", "type":"video/mp4"}], "attributes": {"preload": false, "controls": true, "playsinline": true}}'
       data-sub-html='
       {{~#if meta.caption~}}
