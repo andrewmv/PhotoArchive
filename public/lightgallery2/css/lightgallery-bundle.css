@@ -415,6 +415,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 .lg-outer .lg-video-cont .lg-object {
   width: 100% !important;
   height: 100% !important;
+  object-fit: contain;
 }
 .lg-outer .lg-has-iframe .lg-video-cont {
   -webkit-overflow-scrolling: touch;
