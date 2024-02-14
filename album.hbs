@@ -10,6 +10,7 @@
       <meta property="og:description" content="Photo Gallery for {{gallery.title}}" />
       <title>{{gallery.title}} - {{album.title}}</title>
       <link rel="stylesheet" href="{{relative 'public/lightgallery2/css/lightgallery-bundle.css'}}" />
+      <link rel="stylesheet" href="{{relative 'public/videojs/video-js.min.css'}}" />
       <link rel="stylesheet" href="{{relative 'public/core.css'}}" />
       <link rel="stylesheet" href="{{relative 'public/theme.css'}}" />
 
@@ -26,12 +27,13 @@
 
     <!-- jquery -->
     <script src="{{relative 'public/jquery.min.js'}}"></script>
-
-
+    <!-- VideoJS -->
+    <script src="{{relative 'public/videojs/video.min.js'}}"></script>
     <!-- LightGallery -->
-    <script src="{{relative 'public/lightgallery2/lightgallery.min.js'}}"></script>
+    <script src="{{relative 'public/lightgallery2/lightgallery.umd.js'}}"></script>
     <script src="{{relative 'public/lightgallery2/plugins/zoom/lg-zoom.umd.js'}}"></script>
     <script src="{{relative 'public/lightgallery2/plugins/thumbnail/lg-thumbnail.umd.js'}}"></script>
+    <script src="{{relative 'public/lightgallery2/plugins/video/lg-video.umd.js'}}"></script>
     <script type="text/javascript">
       lightGallery(document.getElementById('gallery'), {
         speed: 400,
@@ -50,9 +52,11 @@
         thumbWidth: 75,
         thumbHeight: "50px",
 
+        videojs: true,
+
         mobileSettings: { controls: false, showCloseIcon: true, download: true },
 
-        plugins: [lgZoom, lgThumbnail]
+        plugins: [lgZoom, lgThumbnail, lgVideo]
       });
       console.log("started lightgallery")
     </script>
